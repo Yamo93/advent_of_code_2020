@@ -1,6 +1,4 @@
 const solve = (input) => {
-  console.log(input);
-
   let counter = 0;
 
   for (let i = 0; i < input.length; i++) {
