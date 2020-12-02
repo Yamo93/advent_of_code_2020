@@ -1,0 +1,19 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Base project",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "node ./utils/bootstrapper.js",
+    "solve": "nodemon --quiet ./utils/solutionRunner.js"
+  },
+  "author": "Pierre Aupeix",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
