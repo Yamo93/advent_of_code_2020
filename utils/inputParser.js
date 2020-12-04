@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const parseProblemInput = (day) => {
+const parseProblemInput = (day, keepLineBreaks = false) => {
   let problemInput;
 
   try {
@@ -11,6 +11,13 @@ const parseProblemInput = (day) => {
       .toString()
       .split('\n')
       .filter(text => text.length > 0)
+
+      if (keepLineBreaks) {
+        problemInput = fs.readFileSync(path, 'utf8')
+          .toString()
+          .split('\n\n')
+          .filter(text => text.length > 0)
+      }
   } catch (error) {
     if (error.code == 'ENOENT') {
       console.error(`Looks like the input file is missing for day ${day}`)

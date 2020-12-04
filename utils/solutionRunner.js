@@ -1,6 +1,7 @@
 const inputs = require("./inputParser.js");
 
 const arguments = process.argv.slice(2);
+const keepLineBreakDays = ['4'];
 
 if (arguments.length) {
   runSolution(day = arguments[0], part = arguments[1]);
@@ -11,7 +12,12 @@ function runSolution(day = 1, part = 1) {
   const solverPath = `${__dirname}/../problems/${paddedDay}/part_${part}.js`;
 
   try {
-    const input = inputs(day);
+    let input = inputs(day);
+    console.log('Day number', day);
+    if (keepLineBreakDays.includes(day)) {
+      const keepLineBreaks = true;
+      input = inputs(day, keepLineBreaks);
+    }
 
     const solver = require(solverPath);
     
