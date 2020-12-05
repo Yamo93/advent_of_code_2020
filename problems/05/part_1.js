@@ -36,7 +36,6 @@ const decodeColumn = decodeCharacters(lowestColumnRange, highestColumnRange, 'L'
 const seatIds = [];
 
 const solve = (seatCodes) => {
-  console.log(decodeRow('FBFBBFF'));
   const dividedSeatCodes = seatCodes.map(code => [code.slice(0, 7), code.slice(7)]);
   for (let i = 0; i < dividedSeatCodes.length; i++) {
     const [rowCode, columnCode] = dividedSeatCodes[i];
@@ -47,12 +46,7 @@ const solve = (seatCodes) => {
   }
 
   const highestSeatId = Math.max(...seatIds);
-  console.log(seatIds);
-  console.log('Amount of seatIds: ', seatIds.length);
-  console.log('Amount of seats: ', 128 * 8);
-  console.log('Amount of seat codes', seatCodes.length);
-  console.log('Highest seat ID: ', highestSeatId);
-  return 'Implement a solution for the input'
+  return highestSeatId;
 }
 
 module.exports = { solve }
