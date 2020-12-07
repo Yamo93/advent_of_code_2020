@@ -1,7 +1,7 @@
 const inputs = require("./inputParser.js");
 
 const arguments = process.argv.slice(2);
-const keepLineBreakDays = ['4'];
+const keepLineBreakDays = ['4', '6'];
 
 if (arguments.length) {
   runSolution(day = arguments[0], part = arguments[1]);
