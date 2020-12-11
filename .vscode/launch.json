@@ -11,7 +11,7 @@
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "npm",
             "runtimeArgs": ["run-script", "solve"],
-            "args": ["6", "2"]
+            "args": ["7", "1"]
         }
     ]
 }
